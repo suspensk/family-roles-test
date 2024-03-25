@@ -1,31 +1,77 @@
 <!DOCTYPE html>
 <html>
+<head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<style>
+.form-blck {background-color: #E7E9EB; padding:5px; margin-bottom:10px;}
+label,input {cursor:pointer;}
+</style>
+
+</head>
+
 <body>
-
-<h1>Display Radio Buttons</h1>
-
+<div class="container">
+<div class="text-primary">Распределение ролей в семье. Методики исследования семейных отношений.</div>
+<p></p>
 <form action="/action_page.php">
-  <p>От кого из вас зависят интересы и увлечения семьи?:</p>
-  <input type="radio" id="q11" name="q1" value="a">
-  <label for="q11">это в большей степени зависит от жены, но и от мужа тоже</label><br>
-  <input type="radio" id="q12" name="q1" value="b">
-  <label for="q12">это в большей степени зависит от мужа, но и от жены тоже</label><br>
-  <input type="radio" id="q12" name="q1" value="b">
-  <label for="q12">это в большей степени зависит от мужа, но и от жены тоже</label><br>
-  <input type="radio" id="q13" name="q1" value="c">
-  <label for="q12">это в большей степени зависит от мужа, но и от жены тоже</label><br>
+<div class="form-blck">
+ <p class="font-weight-bold">1. От кого из вас зависят интересы и увлечения семьи?</p>
 
-  <br>  
+ <div class="form-check">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <label class="form-check-label" for="flexRadioDefault1">
+    это в большей степени зависит от жены, но и от мужа тоже
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >
+  <label class="form-check-label" for="flexRadioDefault2">
+    это в большей степени зависит от мужа, но и от жены тоже
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" >
+  <label class="form-check-label" for="flexRadioDefault3">
+    в основном это зависит от жены
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" >
+  <label class="form-check-label" for="flexRadioDefault4">
+    в основном это зависит от мужа
+  </label>
+</div>
+</div>
+<div class="form-blck">
+ <p class="font-weight-bold">1. От кого из вас зависят интересы и увлечения семьи?</p>
 
-  <p>Please select your age:</p>
-  <input type="radio" id="age1" name="age" value="30">
-  <label for="age1">0 - 30</label><br>
-  <input type="radio" id="age2" name="age" value="60">
-  <label for="age2">31 - 60</label><br>  
-  <input type="radio" id="age3" name="age" value="100">
-  <label for="age3">61 - 100</label><br><br>
-  <input type="submit" value="Submit">
+ <div class="form-check">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <label class="form-check-label" for="flexRadioDefault1">
+    это в большей степени зависит от жены, но и от мужа тоже
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >
+  <label class="form-check-label" for="flexRadioDefault2">
+    это в большей степени зависит от мужа, но и от жены тоже
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" >
+  <label class="form-check-label" for="flexRadioDefault3">
+    в основном это зависит от жены
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" >
+  <label class="form-check-label" for="flexRadioDefault4">
+    в основном это зависит от мужа
+  </label>
+</div>
+</div>
 </form>
-
+</div>
 </body>
 </html>
