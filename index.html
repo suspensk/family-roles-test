@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
- <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 <style>
 .form-blck {background-color: #E7E9EB; padding:5px; margin-bottom:10px;}
 label,input {cursor:pointer;}
+#result {min-height:300px;}
 </style>
 
 </head>
@@ -15,64 +15,706 @@ label,input {cursor:pointer;}
 <div class="container">
 <div class="text-primary">Распределение ролей в семье. Методики исследования семейных отношений.</div>
 <p></p>
-<form action="/action_page.php">
+<form id="myForm" action="/action_page.php">
 <div class="form-blck">
- <p class="font-weight-bold">1. От кого из вас зависят интересы и увлечения семьи?</p>
+ <p class="font-weight-bold">1. От кого должны зависеть интересы и увлечения семьи?</p>
 
  <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-  <label class="form-check-label" for="flexRadioDefault1">
-    это в большей степени зависит от жены, но и от мужа тоже
+  <input class="form-check-input" type="radio" name="1" value="a" id="flexRadioDefault11">
+  <label class="form-check-label" for="flexRadioDefault11">
+    В основном от мужа.
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >
-  <label class="form-check-label" for="flexRadioDefault2">
-    это в большей степени зависит от мужа, но и от жены тоже
+  <input class="form-check-input" type="radio" name="1" value="b" id="flexRadioDefault12" >
+  <label class="form-check-label" for="flexRadioDefault12">
+    В большей степени должны зависеть от мужа, но и от жены тоже.
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" >
-  <label class="form-check-label" for="flexRadioDefault3">
-    в основном это зависит от жены
+  <input class="form-check-input" type="radio" name="1" value="c" id="flexRadioDefault13" >
+  <label class="form-check-label" for="flexRadioDefault13">
+    В большей степени должны зависеть от жены, но и от мужа тоже.
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" >
-  <label class="form-check-label" for="flexRadioDefault4">
-    в основном это зависит от мужа
+  <input class="form-check-input" type="radio" name="1" value="d" id="flexRadioDefault14" >
+  <label class="form-check-label" for="flexRadioDefault14">
+    В основном должны зависеть от жены.
   </label>
 </div>
 </div>
+
 <div class="form-blck">
- <p class="font-weight-bold">1. От кого из вас зависят интересы и увлечения семьи?</p>
+ <p class="font-weight-bold">2. От кого в большей степени должно зависеть настроение в семье? </p>
 
  <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-  <label class="form-check-label" for="flexRadioDefault1">
-    это в большей степени зависит от жены, но и от мужа тоже
+  <input class="form-check-input" type="radio" name="2" value="a" id="flexRadioDefault21">
+  <label class="form-check-label" for="flexRadioDefault21">
+   В основном должно зависеть от жены.
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >
-  <label class="form-check-label" for="flexRadioDefault2">
-    это в большей степени зависит от мужа, но и от жены тоже
+  <input class="form-check-input" type="radio" name="2" value="b" id="flexRadioDefault22" >
+  <label class="form-check-label" for="flexRadioDefault22">
+    В большей степени должно зависеть от жены, но и от мужа тоже.
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" >
-  <label class="form-check-label" for="flexRadioDefault3">
-    в основном это зависит от жены
+  <input class="form-check-input" type="radio" name="2" value="c" id="flexRadioDefault23" >
+  <label class="form-check-label" for="flexRadioDefault23">
+    В большей степени должно зависеть от мужа, но и от жены тоже.
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" >
-  <label class="form-check-label" for="flexRadioDefault4">
-    в основном это зависит от мужа
+  <input class="form-check-input" type="radio" name="2" value="d" id="flexRadioDefault24" >
+  <label class="form-check-label" for="flexRadioDefault24">
+    В основном должно зависеть от мужа.
   </label>
 </div>
 </div>
-</form>
+
+<div class="form-blck">
+ <p class="font-weight-bold">3. Если возникнет необходимость, кто в первую очередь должен найти, где можно занять крупную сумму денег?</p>
+
+ <div class="form-check">
+  <input class="form-check-input" type="radio" name="3" value="a" id="flexRadioDefault31">
+  <label class="form-check-label" for="flexRadioDefault31">
+    Это сделает жена.
+  </label>
 </div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="3" value="b" id="flexRadioDefault32" >
+  <label class="form-check-label" for="flexRadioDefault32">
+    В первую очередь это сделает жена, но и муж тоже.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="3" value="c" id="flexRadioDefault33" >
+  <label class="form-check-label" for="flexRadioDefault33">
+    В первую очередь это сделает муж, но и жена тоже.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="3" value="d" id="flexRadioDefault34" >
+  <label class="form-check-label" for="flexRadioDefault34">
+    Это сделает муж.
+  </label>
+</div>
+</div>
+
+<div class="form-blck">
+ <p class="font-weight-bold">4. Кто в семье чаще должен приглашать в дом гостей?</p>
+
+ <div class="form-check">
+  <input class="form-check-input" type="radio" name="4" value="a" id="flexRadioDefault41">
+  <label class="form-check-label" for="flexRadioDefault41">
+    Чаще муж.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="4" value="b" id="flexRadioDefault42" >
+  <label class="form-check-label" for="flexRadioDefault42">
+    Обычно муж, но и жена тоже.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="4" value="c" id="flexRadioDefault43" >
+  <label class="form-check-label" for="flexRadioDefault43">
+    Обычно жена, но и муж тоже.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="4" value="d" id="flexRadioDefault44" >
+  <label class="form-check-label" for="flexRadioDefault44">
+    Чаще жена.
+  </label>
+</div>
+</div>
+
+<div class="form-blck">
+ <p class="font-weight-bold">5. Кто в семье в большей степени должен заботиться об уюте и удобстве в квартире?</p>
+
+ <div class="form-check">
+  <input class="form-check-input" type="radio" name="5" value="a" id="flexRadioDefault51">
+  <label class="form-check-label" for="flexRadioDefault51">
+    В основном муж.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="5" value="b" id="flexRadioDefault52" >
+  <label class="form-check-label" for="flexRadioDefault52">
+    В большей степени муж, но и жена тоже.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="5" value="c" id="flexRadioDefault53" >
+  <label class="form-check-label" for="flexRadioDefault53">
+    В большей степени жена, но и муж тоже.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="5" value="d" id="flexRadioDefault54" >
+  <label class="form-check-label" for="flexRadioDefault54">
+    В основном жена.
+  </label>
+</div>
+</div>
+
+<div class="form-blck">
+ <p class="font-weight-bold">6. Кто из супругов должен первым целовать и обнимать другого?</p>
+
+ <div class="form-check">
+  <input class="form-check-input" type="radio" name="6" value="a" id="flexRadioDefault61">
+  <label class="form-check-label" for="flexRadioDefault61">
+    Это должен делать муж.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="6" value="b" id="flexRadioDefault62" >
+  <label class="form-check-label" for="flexRadioDefault62">
+    Это должен делать муж, но и жена тоже.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="6" value="c" id="flexRadioDefault63" >
+  <label class="form-check-label" for="flexRadioDefault63">
+    Это должна делать жена, но и муж тоже.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="6" value="d" id="flexRadioDefault64" >
+  <label class="form-check-label" for="flexRadioDefault64">
+    Это должна делать жена.
+  </label>
+</div>
+</div>
+
+<div class="form-blck">
+ <p class="font-weight-bold">7. Кто в семье должен решать, какие газеты и журналы выписывать и покупать?</p>
+
+ <div class="form-check">
+  <input class="form-check-input" type="radio" name="7" value="a" id="flexRadioDefault71">
+  <label class="form-check-label" for="flexRadioDefault71">
+    Обычно должна решать жена.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="7" value="b" id="flexRadioDefault72" >
+  <label class="form-check-label" for="flexRadioDefault72">
+    В большей степени это должно зависеть от жены, но и от мужа тоже.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="7" value="c" id="flexRadioDefault73" >
+  <label class="form-check-label" for="flexRadioDefault73">
+    В большей степени это должно зависеть от мужа, но и от жены тоже.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="7" value="d" id="flexRadioDefault74" >
+  <label class="form-check-label" for="flexRadioDefault74">
+    Обычно должен решать муж.
+  </label>
+</div>
+</div>
+
+<div class="form-blck">
+ <p class="font-weight-bold">8. По чьей инициативе чаще супруги должны ходить в кино, в театр?</p>
+
+ <div class="form-check">
+  <input class="form-check-input" type="radio" name="8" value="a" id="flexRadioDefault81">
+  <label class="form-check-label" for="flexRadioDefault81">
+    По инициативе мужа.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="8" value="b" id="flexRadioDefault82" >
+  <label class="form-check-label" for="flexRadioDefault82">
+    В основном по инициативе мужа, но бывает, что жены тоже.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="8" value="c" id="flexRadioDefault83" >
+  <label class="form-check-label" for="flexRadioDefault83">
+    В основном по инициативе жены, но бывает, что мужа тоже.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="8" value="d" id="flexRadioDefault84" >
+  <label class="form-check-label" for="flexRadioDefault84">
+    По инициативе жены.
+  </label>
+</div>
+</div>
+
+<div class="form-blck">
+ <p class="font-weight-bold">9. Кто в семье должен играть с маленькими детьми?</p>
+
+ <div class="form-check">
+  <input class="form-check-input" type="radio" name="9" value="a" id="flexRadioDefault91">
+  <label class="form-check-label" for="flexRadioDefault91">
+    В основном жена.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="9" value="b" id="flexRadioDefault92" >
+  <label class="form-check-label" for="flexRadioDefault92">
+    Чаще жена, но и муж тоже.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="9" value="c" id="flexRadioDefault93" >
+  <label class="form-check-label" for="flexRadioDefault93">
+    Чаще муж, но и жена тоже.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="9" value="d" id="flexRadioDefault94" >
+  <label class="form-check-label" for="flexRadioDefault94">
+    В основном муж.
+  </label>
+</div>
+</div>
+
+<div class="form-blck">
+ <p class="font-weight-bold">10. От кого в семье должна зависеть взаимная удовлетворенность интимными отношениями?</p>
+
+ <div class="form-check">
+  <input class="form-check-input" type="radio" name="10" value="a" id="flexRadioDefault101">
+  <label class="form-check-label" for="flexRadioDefault101">
+    В основном должна зависеть от мужа.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="10" value="b" id="flexRadioDefault102" >
+  <label class="form-check-label" for="flexRadioDefault102">
+    В большей степени должна зависеть от мужа, но и от жены тоже.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="10" value="c" id="flexRadioDefault103" >
+  <label class="form-check-label" for="flexRadioDefault103">
+    В большей степени должна зависеть от жены, но и от мужа тоже.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="10" value="d" id="flexRadioDefault104" >
+  <label class="form-check-label" for="flexRadioDefault104">
+    В основном должна зависеть от жены.
+  </label>
+</div>
+</div>
+
+<div class="form-blck">
+ <p class="font-weight-bold">11. Почти все супружеские пары время от времени испытывают трудности в интимных отношениях. Как Вы считаете, от кого это может зависеть (вольно или невольно) в большей степени?</p>
+
+ <div class="form-check">
+  <input class="form-check-input" type="radio" name="11" value="a" id="flexRadioDefault111">
+  <label class="form-check-label" for="flexRadioDefault111">
+    Чаще мужа.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="11" value="b" id="flexRadioDefault112" >
+  <label class="form-check-label" for="flexRadioDefault112">
+    От мужа, но и от жены тоже.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="11" value="c" id="flexRadioDefault113" >
+  <label class="form-check-label" for="flexRadioDefault113">
+    От жены, но и от мужа тоже.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="11" value="d" id="flexRadioDefault114" >
+  <label class="form-check-label" for="flexRadioDefault114">
+    Чаще от жены.
+  </label>
+</div>
+</div>
+
+<div class="form-blck">
+ <p class="font-weight-bold">12. Чьи жизненные принципы и правила (отношение ко лжи, обязательность выполнения обещаний, невозможность опозданий и др.) должны быть определяющими в семье?</p>
+
+ <div class="form-check">
+  <input class="form-check-input" type="radio" name="12" value="a" id="flexRadioDefault121">
+  <label class="form-check-label" for="flexRadioDefault121">
+    Жизненные принципы жены.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="12" value="b" id="flexRadioDefault122" >
+  <label class="form-check-label" for="flexRadioDefault122">
+    Как правило, жены, но в некоторых случаях мужа.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="12" value="c" id="flexRadioDefault123" >
+  <label class="form-check-label" for="flexRadioDefault123">
+    Как привило, мужа, но в некоторых случаях жены.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="12" value="d" id="flexRadioDefault124" >
+  <label class="form-check-label" for="flexRadioDefault124">
+    Жизненные принципы мужа.
+  </label>
+</div>
+</div>
+
+<div class="form-blck">
+ <p class="font-weight-bold">13. Кто в семье должен следить за поведением маленьких детей?</p>
+
+ <div class="form-check">
+  <input class="form-check-input" type="radio" name="13" value="a" id="flexRadioDefault131">
+  <label class="form-check-label" for="flexRadioDefault131">
+    Это должна делать жена.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="13" value="b" id="flexRadioDefault132" >
+  <label class="form-check-label" for="flexRadioDefault132">
+    Это должна делать жена, но и муж тоже.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="13" value="c" id="flexRadioDefault133" >
+  <label class="form-check-label" for="flexRadioDefault133">
+    Это должен делать муж, но и жена тоже.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="13" value="d" id="flexRadioDefault134" >
+  <label class="form-check-label" for="flexRadioDefault134">
+    Это должна делать муж.
+  </label>
+</div>
+</div>
+
+<div class="form-blck">
+ <p class="font-weight-bold">14. Кто в семье должен ходить с ребенком в кино, театр, цирк и др.?</p>
+
+ <div class="form-check">
+  <input class="form-check-input" type="radio" name="14" value="a" id="flexRadioDefault141">
+  <label class="form-check-label" for="flexRadioDefault141">
+    Это должен делать муж.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="14" value="b" id="flexRadioDefault142" >
+  <label class="form-check-label" for="flexRadioDefault142">
+    Это должен делать муж, но и жена тоже.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="14" value="c" id="flexRadioDefault143" >
+  <label class="form-check-label" for="flexRadioDefault143">
+    Это должна делать жена, но и муж тоже.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="14" value="d" id="flexRadioDefault144" >
+  <label class="form-check-label" for="flexRadioDefault144">
+    Это должна делать жена.
+  </label>
+</div>
+</div>
+
+<div class="form-blck">
+ <p class="font-weight-bold">15. Кто в семье в большей степени должен обращать внимание на самочувствие другого?</p>
+
+ <div class="form-check">
+  <input class="form-check-input" type="radio" name="15" value="a" id="flexRadioDefault151">
+  <label class="form-check-label" for="flexRadioDefault151">
+    Муж.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="15" value="b" id="flexRadioDefault152" >
+  <label class="form-check-label" for="flexRadioDefault152">
+    В большей степени муж, но и жена тоже.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="15" value="c" id="flexRadioDefault153" >
+  <label class="form-check-label" for="flexRadioDefault153">
+     В большей степени жена, но и муж тоже.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="15" value="d" id="flexRadioDefault154" >
+  <label class="form-check-label" for="flexRadioDefault154">
+     Жена.
+  </label>
+</div>
+</div>
+
+<div class="form-blck">
+ <p class="font-weight-bold">16. Представьте себе такую ситуацию: у обоих супругов появилась возможность сменить работу на более высокооплачиваемую, но менее интересную. Кто это сделает в первую очередь?</p>
+
+ <div class="form-check">
+  <input class="form-check-input" type="radio" name="16" value="a" id="flexRadioDefault161">
+  <label class="form-check-label" for="flexRadioDefault161">
+    Это сделает жена.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="16" value="b" id="flexRadioDefault162" >
+  <label class="form-check-label" for="flexRadioDefault162">
+    Скорее жена, чем муж.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="16" value="c" id="flexRadioDefault163" >
+  <label class="form-check-label" for="flexRadioDefault163">
+    Скорее муж, чем жена.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="16" value="d" id="flexRadioDefault164" >
+  <label class="form-check-label" for="flexRadioDefault164">
+    Это сделает муж.
+  </label>
+</div>
+</div>
+
+<div class="form-blck">
+ <p class="font-weight-bold">17. Кто в семье должен заниматься повседневными покупками? </p>
+
+ <div class="form-check">
+  <input class="form-check-input" type="radio" name="17" value="a" id="flexRadioDefault171">
+  <label class="form-check-label" for="flexRadioDefault171">
+    В основном муж.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="17" value="b" id="flexRadioDefault172" >
+  <label class="form-check-label" for="flexRadioDefault172">
+    В большей степени муж, но и жена тоже.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="17" value="c" id="flexRadioDefault173" >
+  <label class="form-check-label" for="flexRadioDefault173">
+    В большей степени жена, но и муж тоже.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="17" value="d" id="flexRadioDefault174" >
+  <label class="form-check-label" for="flexRadioDefault174">
+    В основном жена.
+  </label>
+</div>
+</div>
+
+<div class="form-blck">
+ <p class="font-weight-bold">18. Кто в семье будет иметь больше оснований обижаться на равнодушие, черствость, бестактность другого?</p>
+
+ <div class="form-check">
+  <input class="form-check-input" type="radio" name="18" value="a" id="flexRadioDefault181">
+  <label class="form-check-label" for="flexRadioDefault181">
+    Муж.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="18" value="b" id="flexRadioDefault182" >
+  <label class="form-check-label" for="flexRadioDefault182">
+    В большей степени муж, но и жена тоже.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="18" value="c" id="flexRadioDefault183" >
+  <label class="form-check-label" for="flexRadioDefault183">
+    В большей степени жена, но и муж тоже.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="18" value="d" id="flexRadioDefault184" >
+  <label class="form-check-label" for="flexRadioDefault184">
+    Жена.
+  </label>
+</div>
+</div>
+
+<div class="form-blck">
+ <p class="font-weight-bold">19. Если в семье возникнут денежные трудности, то кто из супругов должен заняться поисками дополнительного заработка?</p>
+
+ <div class="form-check">
+  <input class="form-check-input" type="radio" name="19" value="a" id="flexRadioDefault191">
+  <label class="form-check-label" for="flexRadioDefault191">
+    Это должен сделать муж.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="19" value="b" id="flexRadioDefault192" >
+  <label class="form-check-label" for="flexRadioDefault192">
+    В первую очередь муж, но и жена примет в этом участие.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="19" value="c" id="flexRadioDefault193" >
+  <label class="form-check-label" for="flexRadioDefault193">
+    В первую очередь жена, но и муж примет в этом участие.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="19" value="d" id="flexRadioDefault194" >
+  <label class="form-check-label" for="flexRadioDefault194">
+    Это должна сделать жена.
+  </label>
+</div>
+</div>
+
+<div class="form-blck">
+ <p class="font-weight-bold">20. Кто в семье должен планировать, как и где провести отпуск?</p>
+
+ <div class="form-check">
+  <input class="form-check-input" type="radio" name="20" value="a" id="flexRadioDefault201">
+  <label class="form-check-label" for="flexRadioDefault201">
+    В основном жена.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="20" value="b" id="flexRadioDefault202" >
+  <label class="form-check-label" for="flexRadioDefault202">
+    Чаще жена, но и муж тоже.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="20" value="c" id="flexRadioDefault203" >
+  <label class="form-check-label" for="flexRadioDefault203">
+    Чаще муж, но и жена тоже.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="20" value="d" id="flexRadioDefault204" >
+  <label class="form-check-label" for="flexRadioDefault204">
+    В основном муж.
+  </label>
+</div>
+</div>
+
+<div class="form-blck">
+ <p class="font-weight-bold">21. Кто в семье должен вызывать представителей различных ремонтных служб и вести с ними переговоры?</p>
+
+ <div class="form-check">
+  <input class="form-check-input" type="radio" name="21" value="a" id="flexRadioDefault211">
+  <label class="form-check-label" for="flexRadioDefault211">
+    Это должна делать жена.
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="21" value="b" id="flexRadioDefault212" >
+  <label class="form-check-label" for="flexRadioDefault212">
+    Это должна делать жена, но и муж тоже.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="21" value="c" id="flexRadioDefault213" >
+  <label class="form-check-label" for="flexRadioDefault213">
+    Это должен делать муж, но и жена тоже.
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="21" value="d" id="flexRadioDefault214" >
+  <label class="form-check-label" for="flexRadioDefault214">
+    Это должен делать муж.
+  </label>
+</div>
+</div>
+
+
+</form><br/>
+<button id="calc" type="button" class="btn btn-primary">Рассчитать</button>
+<br/><br/>
+<div id="result"></div>
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+
+
+$( "#calc" ).on( "click", function() {
+ // alert( "Handler for `click` called." );
+   $('input:radio').each(function () {
+  // console.log($(this).prop('checked'),$(this).prop('name'));
+  //   if ($(this).prop('checked')) {
+    //        urls.push('<div class="' + id + '">' + url + '</div>');
+     //   }
+   
+   })
+ // var g1 = {1, 4, 5, 6, 8, 10, 11, 14, 15, 17, 18, 19};
+ // var g2 = {2, 3, 7, 9, 12, 13, 16, 20, 21};
+  var gv1 = {
+  'a':1,
+  'b':2,
+  'c':3,
+  'd':4
+  };
+    var gv2 = {
+  'a':4,
+  'b':3,
+  'c':2,
+  'd':1
+  };
+ 
+ 
+  for (var i in Array.from(Array(21))) {
+	var k=parseInt(i)+1
+	  if(gv2[$('input[name='+k+']:checked', '#myForm').val()] === undefined){
+		alert('Please answer the question ' + (k));
+	  return;
+	}
+ //  console.log('xx',gv2[$('input[name='+k+']:checked', '#myForm').val()]);
+  } 
+ var p1 = (gv2[$('input[name='+9+']:checked', '#myForm').val()] +
+ gv2[$('input[name='+13+']:checked', '#myForm').val()] + 
+ gv1[$('input[name='+14+']:checked', '#myForm').val()]) / 3;  
+ 
+ var p2 = (gv2[$('input[name='+2+']:checked', '#myForm').val()] +
+ gv1[$('input[name='+15+']:checked', '#myForm').val()] + 
+ gv1[$('input[name='+18+']:checked', '#myForm').val()]) / 3;  
+ 
+ var p3 = (gv1[$('input[name='+19+']:checked', '#myForm').val()] +
+ gv2[$('input[name='+3+']:checked', '#myForm').val()] + 
+ gv2[$('input[name='+16+']:checked', '#myForm').val()]) / 3;  
+ 
+ var p4 = (gv2[$('input[name='+20+']:checked', '#myForm').val()] +
+ gv1[$('input[name='+8+']:checked', '#myForm').val()] + 
+ gv1[$('input[name='+4+']:checked', '#myForm').val()]) / 3;  
+ 
+ var p5 = (gv1[$('input[name='+17+']:checked', '#myForm').val()] +
+ gv1[$('input[name='+5+']:checked', '#myForm').val()] + 
+ gv2[$('input[name='+21+']:checked', '#myForm').val()]) / 3;  
+ 
+ var p6 = (gv1[$('input[name='+10+']:checked', '#myForm').val()] +
+ gv1[$('input[name='+6+']:checked', '#myForm').val()] + 
+ gv1[$('input[name='+11+']:checked', '#myForm').val()]) / 3;  
+ 
+ var p7 = (gv1[$('input[name='+1+']:checked', '#myForm').val()] +
+ gv2[$('input[name='+7+']:checked', '#myForm').val()] + 
+ gv2[$('input[name='+12+']:checked', '#myForm').val()]) / 3;  
+ 
+ $("#result").html(
+ 
+ "<div>1. Воспитание детей – "+(p1.toFixed(2))+"</div>"+
+"<div>2. Эмоциональный климат в семье («психотерапевтическая» функция) - "+(p2.toFixed(2))+"</div>"+
+"<div>3. Материальное обеспечение семьи - "+(p3.toFixed(2))+"</div>"+
+"<div>4. Организация развлечений - "+(p4.toFixed(2))+"</div>"+
+"<div>5. Роль «хозяина», «хозяйки» - "+(p5.toFixed(2))+"</div>"+
+"<div>6. Сексуальный партнер - "+(p6.toFixed(2))+"</div>"+
+"<div>7. Организация семейной субкультуры - "+(p7.toFixed(2))+"</div>"
+ 
+ )
+ 
+
+} );
+
+ 
+
+
+</script>
 </body>
 </html>
